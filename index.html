@@ -6,7 +6,145 @@
   </head>
   <body>
 
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">Базовый HTML и CSS</a>».</p>
+    <header>
+
+      <nav class="main-menu">
+        <ul>
+          <li><a href="#">Информация</a></li>
+          <li><a href="#">Новости</a></li>
+          <li><a href="#">Прайс-лист</a></li>
+          <li><a href="#">Магазин</a></li>
+          <li><a href="#">Контакты</a></li>
+          <li><img src="/img/login.svg" alt="Вход"><a href="#">Вход</a></li>
+        </ul>
+      </nav>
+
+      <div class="index-logo"><img src="/img/index-logo.svg" alt="Бородинский логотип" width="371px" height="155px"></div>
+      <div class="header-features">
+        <ul>
+          <li>
+            <h2>Быстро</h2>
+            <img src="" alt=""> <!-- в каком формате тут должны быть картинки ромбиков? Или это вообще не картинки и надо буллеты так стилизовать? -->
+            <p>МЫ ДЕЛАЕМ СВОЮ РАБОТУ БЫСТРО! ДВА ЧАСА ПРОЛЕТЯТ НЕЗАМЕТНО И ВЫ — СЧАСТЛИВЫЙ ОБЛАДАТЕЛЬ СТИЛЬНОЙ СТРИЖКИ-МИНУТКИ!</p>
+          </li>
+          <li>
+            <h2>Круто</h2>
+            <img src="" alt="">
+            <p>ЗАБУДЬТЕ, КАК ВЫ СТРИГЛИСЬ РАНЬШЕ. МЫ СДЕЛАЕМ ИЗ ВАС ЗВЕЗДУ ФУТБОЛА ИЛИ КИНО! ВО ВСЯКОМ СЛУЧАЕ ВНЕШНЕ.</p>
+          </li>
+          <li>
+            <h2>Дорого</h2>
+            <img src="" alt="">
+            <p>НАШИ МАСТЕРА — ПРОФЕССИОНАЛЫ СВОЕГО ДЕЛА И НЕ МОГУТ СТОИТЬ ДЕШЕВО. К ТОМУ ЖЕ, РАЗВЕ ЦЕНА НЕ ДАЕТ ОПРЕДЕЛЕНЫЙ СТАТУС?</p>
+          </li>
+        </ul>
+      </div>
+
+    </header>
+
+    <div class="content-wrapper">
+
+      <section class="news">
+        <h3>Новости</h3>
+        <article>
+          <!-- новости оформить дивами или тег article уместен? -->
+        <p>НАМ НАКОНЕЦ ЗАВЕЗЛИ ЯГЕРМАЙСТЕР! ТЕПЕРЬ ВЫ МОЖЕТЕ ПРОПУСТИТЬ СТАКАНЧИК ВО ВРЕМЯ СТРИЖКИ</p>
+        <p><time datetime="2016-01-11">11 января</time></p>
+        </article>
+
+        <article>
+        <p>В НАШЕЙ КОМАНДЕ ПОПОЛНЕНИЕ, БОРИС «БРИТВА» СТРИГУНЕЦ, ОБЛАДAТЕЛЬ МНОЖЕСТВА ТИТУЛОВ И НАГРАД ПОПОЛНИЛ НАШИ СТРОЙНЫЕ РЯДЫ</p>
+        <p><time datetime="2016-01-18">18 января</time></p>
+        </article>
+
+        <button>Все новости</button>
+        <!-- Я не знаю что делать с кнопками. Тут будет js или их делать формой? Или еще как? -->
+      </section>
+
+      <section class="gallery">
+        <h3>Фотогалерея</h3>
+        <img src="" alt="">
+        <button>Назад</button>
+        <button>Вперед</button>
+      </section>
+
+    </div>
+
+    <div class="content-wrapper">
+
+      <section class="main-contacts">
+        <h3>Контактная информация</h3>
+        <p>
+          Барбершоп «Бородинский»<br>
+          Адрес: г. Санкт-Петербург, Б. Конюшенная, д. 19/8<br>
+          Телефон: <a href="tel:+79456660266">+7 (945) 666-02-66</a>
+        </p>
+        <p>
+          Время работы:<br>
+          Пн – Пт: с 10:00 до 22:00<br>
+          Сб – Вс: с 10:00 до 19:00
+        </p>
+        <button>Как проехать</button>
+        <button>Обратная связь</button>
+      </section>
+
+      <section class="callback-form">
+
+        <h3>Записаться</h3>
+        <p>УКАЖИТЕ ЖЕЛАЕМУЮ ДАТУ И ВРЕМЯ И МЫ СВЯЖЕМСЯ С ВАМИ ДЛЯ ПОДТВЕРЖДЕНИЯ БРОНИ</p>
+
+        <form action="/echo" method="post">
+          <div class="half-width">
+            <label for="form-date">Дата</label>
+            <input type="date" name="date" id="form-date" value="08.10.2017">
+          </div>
+
+          <div class="half-width">
+            <label for="form-time">Время</label>
+            <input type="time" name="time" value="10:00">
+          </div>
+
+          <div class="half-width">
+            <label for="form-username">Ваше имя</label>
+            <input type="text" name="username" id="form-username" value="Борода">
+          </div>
+
+          <div class="half-width">
+            <label for="form-tel">Телефон</label>
+            <input type="tel" name="tel" id="form-tel" pattern="+[0-9]{1} [0-9]{3} [0-9]{3}-[0-9]{2}-[0-9]{2}" value="+7 123 456-78-90" required>
+          </div>
+
+          <input type="submit" value="Отправить">
+        </form>
+
+      </section>
+
+    </div>
+
+    <footer>
+
+      <div class="footer-contacts">
+        <p>
+          Барбершоп «Бородинский»<br>
+          Адрес: г. Санкт-Петербург, Б. Конюшенная, д. 19/8<br>
+          <a href="#">Как нас найти?</a><br>
+          Телефон: <a href="tel:+79456660266">+7 (945) 666-02-66</a>
+        </p>
+      </div>
+
+      <div class="social-media">
+        <p>Давайте дружить!</p>
+        <img src="/img/vk.svg" alt="Вконтакте">
+        <img src="/img/facebook.svg" alt="Facebook">
+        <img src="/img/instagram.svg" alt="Instagram">
+      </div>
+
+      <div class="developer">
+          <p>Разработано:</p>
+          <button>HTML Academy</button>
+      </div>
+
+    </footer>
 
   </body>
 </html>
